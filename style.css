@@ -1,0 +1,131 @@
+/* Variables CSS */
+:root {
+    --primary-color: #4caf50; /* Verde */
+    --secondary-color: #2196f3; /* Azul */
+    --danger-color: #f44336; /* Rojo */
+    --text-color: #ffffff; /* Blanco */
+    --border-radius: 0.25rem; /* 4px */
+    --box-shadow: 0 0.625rem rgba(0, 0, 0, 0.1); /* Sombra */
+    --font-size-base: 16px; /* Base para rem */
+}
+
+/* Establecer el tamaño de fuente raíz */
+html {
+    font-size: var(--font-size-base); /* 1rem = 16px */
+}
+
+/* Estilos básicos para una mejor presentación */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    height: 80vh;
+}
+
+.column {
+    background: #fff;
+    padding: 1.25rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 100%;
+    margin-bottom: 0.625rem;
+    padding: 0.625rem;
+    border: 0.0625rem solid #ddd;
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+textarea#inputText {
+    height: 6.25rem;
+}
+
+textarea#outputText {
+    flex: 1;
+    min-height: 12.5rem;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+    justify-content: flex-end;
+}
+
+.buttons button {
+    flex: 1 1 3.125rem;
+    padding: 0.3125rem 0.625rem;
+    margin: 0.3125rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#encryptButton {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+#decryptButton {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+#copyButton {
+    background-color: var(--danger-color);
+    color: var(--text-color);
+    font-weight: bold;
+    border: 2px solid #c62828;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#copyButton:hover {
+    background-color: #c62828;
+    border-color: #b71c1c;
+}
+
+#copyButton:active {
+    transform: scale(0.98);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 37.5rem) { /* 600px = 37.5rem */
+    .container {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .column {
+        width: 100%;
+        margin-bottom: 1.25rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+

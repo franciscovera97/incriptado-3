@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador y Desencriptador de Texto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <section class="column" id="inputColumn">
+            <h1>Encriptador y Desencriptador de Texto</h1>
+            <textarea id="inputText" placeholder="Escribe tu mensaje aquí..." aria-label="Campo de texto de entrada"></textarea>
+            <div class="buttons">
+                <button id="encryptButton" aria-label="Encriptar texto">Encriptar</button>
+                <button id="decryptButton" aria-label="Desencriptar texto">Desencriptar</button>
+            </div>
+        </section>
+        <section class="column" id="outputColumn">
+            <h2>Resultado:</h2>
+            <textarea id="outputText" readonly aria-label="Campo de texto de resultado"></textarea>
+            <button id="copyButton" aria-label="Copiar al portapapeles">Copiar</button>
+        </section>
+    </main>
+    <script src="script.js" defer></script>
+</body>
+</html>
